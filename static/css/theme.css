@@ -561,7 +561,7 @@ body.tt-m-menu-open #header.header-show-hide-on-scroll { /* disable hide/show he
 	margin: 0;
 	padding: 30px 0;
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 15px;
 	font-weight: 500;
 	color: #222;
 	-webkit-transition: all 0.1s ease-in-out;
@@ -788,7 +788,7 @@ body.tt-m-menu-open #header.header-show-hide-on-scroll { /* disable hide/show he
 		padding: 40px 0 30px 0;
 	}
 	#header.menu-align-center #logo img {
-		max-height: 200px;
+		max-height: 80px;
 	}
 
 	#header.menu-align-center .tt-menu-nav > li > a:after {
@@ -6298,6 +6298,36 @@ ul.sr-item-attr > li a:hover {
 }
 
 
+/* owl fadeIn / fadeOut animations 
+=================================== */
+
+.owl-item.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+.owl-item.fadeOut {
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@-webkit-keyframes fadeOut {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@keyframes fadeOut {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+
 /* ------------------------------------------------------------------------------------ *
  *  Project carousel (related with "Latest work section" and "More projects section")
 /* ------------------------------------------------------------------------------------ */
@@ -6661,7 +6691,7 @@ ul.bl-item-attr .favorite-btn {
 /* blog list item if isotope "col-1" is enabled 
 ================================================ */
 #blog-list-section .isotope.col-1 .isotope-items-wrap {
-	max-width: 900px;
+	max-width: 1140px;
 	margin: 0 auto;
 }
 
@@ -6676,7 +6706,7 @@ ul.bl-item-attr .favorite-btn {
 }
 @media (min-width: 768px) {
 	#blog-list-section .isotope.col-1 .bl-item-info {
-		margin: -1% 5% 3% 5%;
+		margin: -7% 5% 3% 5%;
 		padding: 5% 5% 5% 5%;
 		border: none;
 		box-shadow: none;
@@ -6746,7 +6776,7 @@ ul.bl-item-attr .favorite-btn {
 .blog-single-simple {
 }
 body.tt-boxed .blog-single-simple .tt-wrap {
-	max-width: 900px;
+	max-width: 1140px;
 }
 
 /* blog single inner */
@@ -8544,6 +8574,79 @@ body.header-transparent-on #page-header.ph-xlg .page-header-inner {
 
 
 /* ------------------------------------------------------------- *
+ * YTP Player: https://github.com/pupunzi/jquery.mb.YTPlayer;
+/* ------------------------------------------------------------- */
+
+.youtube-bg {
+	position: relative;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.YTPOverlay {
+	background-color: transparent;
+}
+.YTPOverlay.raster {
+	background: url("../vendor/ytplayer/images/raster.png"); /* "raster.png" or "raster_dot.png" */
+	background-color: transparent;
+}
+.youtube-bg.YTPFullscreen .YTPOverlay, .youtube-bg.YTPFullscreen .YTPOverlay.raster, .youtube-bg.YTPFullscreen .cover {
+	display: none;
+}
+
+/* Video control bar */
+.mb_YTPBar, .mb_YTPBar.visible {
+	opacity: .2;
+	z-index: 9;
+}
+.mb_YTPBar .buttonBar {
+	top: -40px;
+	height: 40px;
+	padding: 10px 10px 0px 10px;
+}
+.mb_YTPBar, .mb_YTPBar .mb_YTPProgress, .mb_YTPBar .mb_YTPLoaded, .mb_YTPBar .mb_YTPseekbar {
+	height: 4px;
+	padding: 0;
+}
+.mb_YTPBar .mb_YTPProgress, .mb_YTPBar .mb_YTPLoaded {
+	cursor: pointer;
+}
+.mb_YTPBar .mb_YTPseekbar {
+	background: #F20000;
+	cursor: pointer;
+}
+
+/* Video control elements */
+.mb_YTPBar span.mb_OnlyYT {
+	left: 250px;
+	top: 10px;
+	right: auto;
+}
+@media (min-width: 480px) {
+	.mb_YTPBar span.mb_OnlyYT {
+		left: 330px;
+	}
+}
+
+
+/* YTPlayer full size cover
+============================ */
+.youtube-bg-wrap.ytp-full,
+.youtube-bg-wrap.ytp-full .inline-YTPlayer,
+.youtube-bg-wrap.ytp-full .youtube-bg {
+	position: absolute !important;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.youtube-bg-wrap.ytp-full .youtube-bg {
+	padding-bottom: 0 !important;
+	height: auto !important;
+}
+
+
+/* ------------------------------------------------------------- *
  * Panels
 /* ------------------------------------------------------------- */
 
@@ -10326,10 +10429,6 @@ body.modal-open {
 	margin: 15px 0 35px 0;
 }
 
-#footer-logo img {
-	max-height: 165px;
-}
-
 #footer-logo .logo-light {
 	display: none;
 }
@@ -10337,6 +10436,10 @@ body.modal-open {
 #footer-logo .logo-light-m,
 #footer-logo .logo-dark-m {
 	display: none;
+}
+
+#footer-logo img {
+	max-height: 80px;
 }
 
 @media (max-width: 767px) {
