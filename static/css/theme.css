@@ -503,7 +503,7 @@ body.tt-m-menu-open #header.header-show-hide-on-scroll { /* disable hide/show he
 		top: 13px !important;
 	}
 	#header #logo img {
-		max-height: 34px !important;
+		max-height: 46px !important;
 	}
 
 	#logo .logo-dark {
@@ -2058,7 +2058,7 @@ body.tt-boxed.page-header-on .isotope-wrap.tt-wrap .isotope.gutter-3 .isotope-to
 /* if boxed layout enabled */
 body.tt-boxed .isotope-wrap.tt-wrap .isotope-items-wrap,
 body.tt-boxed .isotope-wrap.tt-wrap .isotope.gutter-3 .isotope-items-wrap {
-	margin-top: 40px;
+	margin-top: 20px;
 	margin-left: 0;
 	margin-right: 0;
 }
@@ -4387,8 +4387,8 @@ body.header-transparent-on .gs-carousel-wrap.no-padding .owl-carousel.cc-height-
 	font-style: italic;
 	color: #222;
 	z-index: 3;
-	opacity: 0;
-	visibility: hidden;
+	opacity: 1;
+	visibility: visible;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -4405,9 +4405,9 @@ body.header-transparent-on .gs-carousel-wrap.no-padding .owl-carousel.cc-height-
 	transition-delay: 0.2s;
 }
 @media (max-width: 992px) { /* disable captions on small screens */
-	.gallery-single-carousel .cc-item .gsi-image-caption {
-		display: none;
-	}
+	/*.gallery-single-carousel .cc-item .gsi-image-caption {*/
+	/*	display: none;*/
+	/*}*/
 }
 
 /* video play icon for gallery single carousel item */
@@ -6491,6 +6491,7 @@ body.tt-boxed .blog-list-inner.tt-wrap {
 ================== */
 .blog-list-item {
 	position: relative;
+	margin-top: 16px;
 }
 @media (max-width: 768px) {
 	.blog-list-item {
@@ -6743,9 +6744,9 @@ ul.bl-item-attr .favorite-btn {
 }
 
 @media (min-width: 991px) {
-	#blog-list-section.blog-list-simple .bl-item-info {
-		text-align: center;
-	}
+	/*#blog-list-section.blog-list-simple .bl-item-info {*/
+	/*	text-align: center;*/
+	/*}*/
 	#blog-list-section.blog-list-simple .bl-item-info .bl-item-category {
 		margin-right: 0;
 	}
@@ -6819,7 +6820,7 @@ body.tt-boxed .blog-single-inner.tt-wrap {
 	position: relative;
 	background-color: #FFF;
 	padding: 5%;
-	z-index: 1;
+	z-index: 0;
 }
 .blog-single-post-title {
 	margin: 0;
