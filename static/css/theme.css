@@ -6803,7 +6803,7 @@ body.tt-boxed .blog-single-inner.tt-wrap {
 }
 
 #blog-single-cection.blog-single-simple {
-	max-width: 1140px;
+	max-width: 900px;
 	margin: 0 auto;
 	padding-top: 0;
 }
@@ -6821,6 +6821,7 @@ body.tt-boxed .blog-single-inner.tt-wrap {
 	background-color: #FFF;
 	padding: 5%;
 	z-index: 0;
+	text-align: center;
 }
 .blog-single-post-title {
 	margin: 0;
